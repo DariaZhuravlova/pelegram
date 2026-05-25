@@ -1,5 +1,6 @@
-import type {FC, ReactNode} from "react";
-import {ChevronRight} from "lucide-react";
+import type { FC, ReactNode } from "react"
+
+import ChevronRightIcon from "@/shared/assets/svg/chevron_right.svg?react"
 
 type Props = {
     icon: ReactNode;
@@ -7,20 +8,20 @@ type Props = {
     value?: string;
 };
 
-export const SettingsItem: FC<Props> = ({icon, title, value}) => {
+export const SettingsItem: FC<Props> = ({ icon, title, value }) => {
     return (
-        <div className="flex items-center justify-between border-b border-zinc-100 py-4 last:border-none">
+        <div className="flex items-center justify-between border-b border-border py-4 last:border-none">
             <div className="flex items-center gap-3">
-                <div className="text-blue-500">{icon}</div>
+                <div className="text-accent">{ icon }</div>
 
-                <span className="text-[17px]">{title}</span>
+                <span className="text-body-medium">{ title }</span>
             </div>
 
             <div className="flex items-center gap-2">
-                {value && <span className="text-zinc-400">{value}</span>}
+                { value && <span className="text-detail">{ value }</span> }
 
-                <ChevronRight className="h-4 w-4 text-zinc-300" />
+                <ChevronRightIcon className="settings-row__chevron" aria-hidden />
             </div>
         </div>
-    );
-};
+    )
+}

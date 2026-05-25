@@ -1,4 +1,4 @@
-import {Avatar, AvatarFallback} from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 export const ProfileHeader = () => {
     return (
@@ -11,9 +11,9 @@ export const ProfileHeader = () => {
                 <div>
                     <h2 className="font-semibold text-lg">Dinosaur</h2>
 
-                    <p className="text-sm text-zinc-500">@dino</p>
+                    <p className="text-sm ">@dino</p>
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
